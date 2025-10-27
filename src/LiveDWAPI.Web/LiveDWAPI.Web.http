@@ -1,6 +1,6 @@
-@LiveDWAPI.Web_HostAddress = http://localhost:5148
+@LiveDWAPI.Web_HostAddress = http://localhost:5147
 
-GET {{LiveDWAPI.Web_HostAddress}}/weatherforecast/
+GET {{LiveDWAPI.Web_HostAddress}}/About/Info/
 Accept: application/json
 
 ###
