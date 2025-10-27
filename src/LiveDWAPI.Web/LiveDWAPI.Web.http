@@ -1,0 +1,6 @@
+@LiveDWAPI.Web_HostAddress = http://localhost:5148
+
+GET {{LiveDWAPI.Web_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
