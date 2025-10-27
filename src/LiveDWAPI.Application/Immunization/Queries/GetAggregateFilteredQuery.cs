@@ -31,7 +31,9 @@ public class GetAggregateFilteredQueryHandler:IRequestHandler<GetAggregateFilter
         try
         {
             IQueryable<FactAggregateVaccination> query = _context.FactAggregateVaccinations
-                .Where(x=>x.FacilityName!=null);
+                .Where(x=> EF.Functions.Like(
+                               EF.Property<string?>(x, "indicator"), "Children Immunized") && 
+                           x.FacilityName!=null);
 
             // Indicator
             if (request.Filter.HasVaccine())
